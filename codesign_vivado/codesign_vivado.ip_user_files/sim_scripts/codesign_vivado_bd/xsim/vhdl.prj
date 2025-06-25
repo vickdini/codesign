@@ -1,0 +1,6 @@
+vhdl xil_defaultlib  \
+"../../../bd/codesign_vivado_bd/ip/codesign_vivado_bd_axi_smc_3/bd_0/ip/ip_1/sim/bd_fac1_psr_aclk_0.vhd" \
+"../../../bd/codesign_vivado_bd/ip/codesign_vivado_bd_rst_ps8_0_96M_3/sim/codesign_vivado_bd_rst_ps8_0_96M_3.vhd" \
+
+# Do not sort compile order
+nosort
