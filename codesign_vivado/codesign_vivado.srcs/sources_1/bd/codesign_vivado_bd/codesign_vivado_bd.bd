@@ -2438,7 +2438,7 @@
           "PSU__LPD_SLCR__CSUPMU__FREQMHZ": {
             "value": "100"
           },
-          "PSU__MAXIGP2__DATA_WIDTH": {
+          "PSU__MAXIGP0__DATA_WIDTH": {
             "value": "32"
           },
           "PSU__M_AXI_GP0_SUPPORTS_NARROW_BURST": {
@@ -2858,13 +2858,13 @@
             "value": "0"
           },
           "PSU__USE__M_AXI_GP0": {
-            "value": "0"
+            "value": "1"
           },
           "PSU__USE__M_AXI_GP1": {
             "value": "0"
           },
           "PSU__USE__M_AXI_GP2": {
-            "value": "1"
+            "value": "0"
           },
           "PSU__USE__PROC_EVENT_BUS": {
             "value": "0"
@@ -2991,7 +2991,7 @@
           }
         },
         "interface_ports": {
-          "M_AXI_HPM0_LPD": {
+          "M_AXI_HPM0_FPD": {
             "bd_attributes": {
               "TYPE": {
                 "value": "END_POINT",
@@ -3002,8 +3002,8 @@
             "mode": "Master",
             "address_space_ref": "Data",
             "base_address": {
-              "minimum": "0x80000000",
-              "maximum": "0x9FFFFFFF",
+              "minimum": "0xA0000000",
+              "maximum": "0x0047FFFFFFFF",
               "width": "40"
             }
           }
@@ -3175,9 +3175,9 @@
           "axi4_half_adder_1/S00_AXI_Half_Adder"
         ]
       },
-      "zynq_ultra_ps_e_0_M_AXI_HPM0_LPD": {
+      "zynq_ultra_ps_e_0_M_AXI_HPM0_FPD": {
         "interface_ports": [
-          "zynq_ultra_ps_e_0/M_AXI_HPM0_LPD",
+          "zynq_ultra_ps_e_0/M_AXI_HPM0_FPD",
           "axi_smc/S00_AXI"
         ]
       }
@@ -3199,10 +3199,10 @@
       "zynq_ultra_ps_e_0_pl_clk0": {
         "ports": [
           "zynq_ultra_ps_e_0/pl_clk0",
-          "zynq_ultra_ps_e_0/maxihpm0_lpd_aclk",
           "axi_smc/aclk",
           "rst_ps8_0_96M/slowest_sync_clk",
-          "axi4_half_adder_1/s00_axi_half_adder_aclk"
+          "axi4_half_adder_1/s00_axi_half_adder_aclk",
+          "zynq_ultra_ps_e_0/maxihpm0_fpd_aclk"
         ]
       },
       "zynq_ultra_ps_e_0_pl_resetn0": {
@@ -3219,7 +3219,7 @@
             "segments": {
               "SEG_axi4_half_adder_1_S00_AXI_Half_Adder_reg": {
                 "address_block": "/axi4_half_adder_1/S00_AXI_Half_Adder/S00_AXI_Half_Adder_reg",
-                "offset": "0x0080000000",
+                "offset": "0x00A0000000",
                 "range": "64K",
                 "offset_base_param": "C_S00_AXI_Half_Adder_BASEADDR",
                 "offset_high_param": "C_S00_AXI_Half_Adder_HIGHADDR"

@@ -1,0 +1,3 @@
+C:/Users/Vick/Desktop/codesign/codesign_vitis/platform/zynqmp_fsbl/build/CMakeFiles/fsbl.elf.dir
+C:/Users/Vick/Desktop/codesign/codesign_vitis/platform/zynqmp_fsbl/build/CMakeFiles/edit_cache.dir
+C:/Users/Vick/Desktop/codesign/codesign_vitis/platform/zynqmp_fsbl/build/CMakeFiles/rebuild_cache.dir

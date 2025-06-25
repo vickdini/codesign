@@ -1,5 +1,5 @@
 namespace eval ::optrace {
-  variable script "C:/Users/Vick/Desktop/codesign_vivado/codesign_vivado.runs/impl_1/codesign_vivado_bd_wrapper.tcl"
+  variable script "C:/Users/Vick/Desktop/codesign/codesign_vivado/codesign_vivado.runs/impl_1/codesign_vivado_bd_wrapper.tcl"
   variable category "vivado_impl"
 }
 
@@ -110,20 +110,20 @@ set rc [catch {
   set_param bd.open.in_stealth_mode 1
   set_param runs.launchOptions { -jobs 6  }
   open_checkpoint codesign_vivado_bd_wrapper_routed.dcp
-  set_property webtalk.parent_dir C:/Users/Vick/Desktop/codesign_vivado/codesign_vivado.cache/wt [current_project]
+  set_property webtalk.parent_dir C:/Users/Vick/Desktop/codesign/codesign_vivado/codesign_vivado.cache/wt [current_project]
 OPTRACE "Write Bitstream: pre hook" START { }
   set src_rc [catch { 
-    puts "source C:/Users/Vick/Desktop/codesign_vivado/codesign_vivado.srcs/sources_1/new/unassigned_pins.tcl"
-    source C:/Users/Vick/Desktop/codesign_vivado/codesign_vivado.srcs/sources_1/new/unassigned_pins.tcl
+    puts "source C:/Users/Vick/Desktop/codesign/codesign_vivado/codesign_vivado.srcs/sources_1/new/unassigned_pins.tcl"
+    source C:/Users/Vick/Desktop/codesign/codesign_vivado/codesign_vivado.srcs/sources_1/new/unassigned_pins.tcl
   } _RESULT] 
   if {$src_rc} { 
     set tool_flow [get_property -quiet TOOL_FLOW [current_project -quiet]]
     if { $tool_flow eq {SDx} } { 
       send_gid_msg -id 2 -ssname VPL_TCL -severity ERROR $_RESULT
-      send_gid_msg -id 3 -ssname VPL_TCL -severity ERROR "sourcing script C:/Users/Vick/Desktop/codesign_vivado/codesign_vivado.srcs/sources_1/new/unassigned_pins.tcl failed"
+      send_gid_msg -id 3 -ssname VPL_TCL -severity ERROR "sourcing script C:/Users/Vick/Desktop/codesign/codesign_vivado/codesign_vivado.srcs/sources_1/new/unassigned_pins.tcl failed"
     } else {
       send_msg_id runtcl-1 status "$_RESULT"
-      send_msg_id runtcl-2 status "sourcing script C:/Users/Vick/Desktop/codesign_vivado/codesign_vivado.srcs/sources_1/new/unassigned_pins.tcl failed"
+      send_msg_id runtcl-2 status "sourcing script C:/Users/Vick/Desktop/codesign/codesign_vivado/codesign_vivado.srcs/sources_1/new/unassigned_pins.tcl failed"
     }
     return -code error
   }

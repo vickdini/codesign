@@ -25,7 +25,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/Vick/Desktop/codesign_vivado/codesign_vivado.runs/impl_1'
+HD_PWD='C:/Users/Vick/Desktop/codesign/codesign_vivado/codesign_vivado.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

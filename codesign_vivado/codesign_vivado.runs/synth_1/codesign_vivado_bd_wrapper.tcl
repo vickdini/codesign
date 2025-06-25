@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Users/Vick/Desktop/codesign_vivado/codesign_vivado.runs/synth_1/codesign_vivado_bd_wrapper.tcl"
+  variable script "C:/Users/Vick/Desktop/codesign/codesign_vivado/codesign_vivado.runs/synth_1/codesign_vivado_bd_wrapper.tcl"
   variable category "vivado_synth"
 }
 
@@ -65,33 +65,33 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir C:/Users/Vick/Desktop/codesign_vivado/codesign_vivado.cache/wt [current_project]
-set_property parent.project_path C:/Users/Vick/Desktop/codesign_vivado/codesign_vivado.xpr [current_project]
+set_property webtalk.parent_dir C:/Users/Vick/Desktop/codesign/codesign_vivado/codesign_vivado.cache/wt [current_project]
+set_property parent.project_path C:/Users/Vick/Desktop/codesign/codesign_vivado/codesign_vivado.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property ip_repo_paths c:/Users/Vick/Desktop/ip_repo/axi4_half_adder_1_0 [current_project]
 update_ip_catalog
-set_property ip_output_repo c:/Users/Vick/Desktop/codesign_vivado/codesign_vivado.cache/ip [current_project]
+set_property ip_output_repo c:/Users/Vick/Desktop/codesign/codesign_vivado/codesign_vivado.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_verilog -library xil_defaultlib C:/Users/Vick/Desktop/codesign_vivado/codesign_vivado.gen/sources_1/bd/codesign_vivado_bd/hdl/codesign_vivado_bd_wrapper.v
-add_files C:/Users/Vick/Desktop/codesign_vivado/codesign_vivado.srcs/sources_1/bd/codesign_vivado_bd/codesign_vivado_bd.bd
-set_property used_in_implementation false [get_files -all c:/Users/Vick/Desktop/codesign_vivado/codesign_vivado.gen/sources_1/bd/codesign_vivado_bd/ip/codesign_vivado_bd_zynq_ultra_ps_e_0_0/codesign_vivado_bd_zynq_ultra_ps_e_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Vick/Desktop/codesign_vivado/codesign_vivado.gen/sources_1/bd/codesign_vivado_bd/ip/codesign_vivado_bd_zynq_ultra_ps_e_0_0/codesign_vivado_bd_zynq_ultra_ps_e_0_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Vick/Desktop/codesign_vivado/codesign_vivado.gen/sources_1/bd/codesign_vivado_bd/ip/codesign_vivado_bd_axi_smc_3/bd_0/ip/ip_1/bd_fac1_psr_aclk_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Vick/Desktop/codesign_vivado/codesign_vivado.gen/sources_1/bd/codesign_vivado_bd/ip/codesign_vivado_bd_axi_smc_3/bd_0/ip/ip_5/bd_fac1_s00a2s_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Vick/Desktop/codesign_vivado/codesign_vivado.gen/sources_1/bd/codesign_vivado_bd/ip/codesign_vivado_bd_axi_smc_3/bd_0/ip/ip_6/bd_fac1_sarn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Vick/Desktop/codesign_vivado/codesign_vivado.gen/sources_1/bd/codesign_vivado_bd/ip/codesign_vivado_bd_axi_smc_3/bd_0/ip/ip_7/bd_fac1_srn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Vick/Desktop/codesign_vivado/codesign_vivado.gen/sources_1/bd/codesign_vivado_bd/ip/codesign_vivado_bd_axi_smc_3/bd_0/ip/ip_8/bd_fac1_sawn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Vick/Desktop/codesign_vivado/codesign_vivado.gen/sources_1/bd/codesign_vivado_bd/ip/codesign_vivado_bd_axi_smc_3/bd_0/ip/ip_9/bd_fac1_swn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Vick/Desktop/codesign_vivado/codesign_vivado.gen/sources_1/bd/codesign_vivado_bd/ip/codesign_vivado_bd_axi_smc_3/bd_0/ip/ip_10/bd_fac1_sbn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Vick/Desktop/codesign_vivado/codesign_vivado.gen/sources_1/bd/codesign_vivado_bd/ip/codesign_vivado_bd_axi_smc_3/bd_0/ip/ip_11/bd_fac1_m00s2a_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Vick/Desktop/codesign_vivado/codesign_vivado.gen/sources_1/bd/codesign_vivado_bd/ip/codesign_vivado_bd_axi_smc_3/ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Vick/Desktop/codesign_vivado/codesign_vivado.gen/sources_1/bd/codesign_vivado_bd/ip/codesign_vivado_bd_axi_smc_3/smartconnect.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Vick/Desktop/codesign_vivado/codesign_vivado.gen/sources_1/bd/codesign_vivado_bd/ip/codesign_vivado_bd_rst_ps8_0_96M_3/codesign_vivado_bd_rst_ps8_0_96M_3_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Vick/Desktop/codesign_vivado/codesign_vivado.gen/sources_1/bd/codesign_vivado_bd/codesign_vivado_bd_ooc.xdc]
+read_verilog -library xil_defaultlib C:/Users/Vick/Desktop/codesign/codesign_vivado/codesign_vivado.gen/sources_1/bd/codesign_vivado_bd/hdl/codesign_vivado_bd_wrapper.v
+add_files C:/Users/Vick/Desktop/codesign/codesign_vivado/codesign_vivado.srcs/sources_1/bd/codesign_vivado_bd/codesign_vivado_bd.bd
+set_property used_in_implementation false [get_files -all c:/Users/Vick/Desktop/codesign/codesign_vivado/codesign_vivado.gen/sources_1/bd/codesign_vivado_bd/ip/codesign_vivado_bd_zynq_ultra_ps_e_0_0/codesign_vivado_bd_zynq_ultra_ps_e_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Vick/Desktop/codesign/codesign_vivado/codesign_vivado.gen/sources_1/bd/codesign_vivado_bd/ip/codesign_vivado_bd_zynq_ultra_ps_e_0_0/codesign_vivado_bd_zynq_ultra_ps_e_0_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Vick/Desktop/codesign/codesign_vivado/codesign_vivado.gen/sources_1/bd/codesign_vivado_bd/ip/codesign_vivado_bd_axi_smc_3/bd_0/ip/ip_1/bd_fac1_psr_aclk_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Vick/Desktop/codesign/codesign_vivado/codesign_vivado.gen/sources_1/bd/codesign_vivado_bd/ip/codesign_vivado_bd_axi_smc_3/bd_0/ip/ip_5/bd_fac1_s00a2s_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Vick/Desktop/codesign/codesign_vivado/codesign_vivado.gen/sources_1/bd/codesign_vivado_bd/ip/codesign_vivado_bd_axi_smc_3/bd_0/ip/ip_6/bd_fac1_sarn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Vick/Desktop/codesign/codesign_vivado/codesign_vivado.gen/sources_1/bd/codesign_vivado_bd/ip/codesign_vivado_bd_axi_smc_3/bd_0/ip/ip_7/bd_fac1_srn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Vick/Desktop/codesign/codesign_vivado/codesign_vivado.gen/sources_1/bd/codesign_vivado_bd/ip/codesign_vivado_bd_axi_smc_3/bd_0/ip/ip_8/bd_fac1_sawn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Vick/Desktop/codesign/codesign_vivado/codesign_vivado.gen/sources_1/bd/codesign_vivado_bd/ip/codesign_vivado_bd_axi_smc_3/bd_0/ip/ip_9/bd_fac1_swn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Vick/Desktop/codesign/codesign_vivado/codesign_vivado.gen/sources_1/bd/codesign_vivado_bd/ip/codesign_vivado_bd_axi_smc_3/bd_0/ip/ip_10/bd_fac1_sbn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Vick/Desktop/codesign/codesign_vivado/codesign_vivado.gen/sources_1/bd/codesign_vivado_bd/ip/codesign_vivado_bd_axi_smc_3/bd_0/ip/ip_11/bd_fac1_m00s2a_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Vick/Desktop/codesign/codesign_vivado/codesign_vivado.gen/sources_1/bd/codesign_vivado_bd/ip/codesign_vivado_bd_axi_smc_3/ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Vick/Desktop/codesign/codesign_vivado/codesign_vivado.gen/sources_1/bd/codesign_vivado_bd/ip/codesign_vivado_bd_axi_smc_3/smartconnect.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Vick/Desktop/codesign/codesign_vivado/codesign_vivado.gen/sources_1/bd/codesign_vivado_bd/ip/codesign_vivado_bd_rst_ps8_0_96M_3/codesign_vivado_bd_rst_ps8_0_96M_3_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Vick/Desktop/codesign/codesign_vivado/codesign_vivado.gen/sources_1/bd/codesign_vivado_bd/codesign_vivado_bd_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -102,14 +102,14 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/Vick/Desktop/codesign_vivado/codesign_vivado.srcs/constrs_1/imports/Downloads/zu3.xdc
-set_property used_in_implementation false [get_files C:/Users/Vick/Desktop/codesign_vivado/codesign_vivado.srcs/constrs_1/imports/Downloads/zu3.xdc]
+read_xdc C:/Users/Vick/Desktop/codesign/codesign_vivado/codesign_vivado.srcs/constrs_1/imports/Downloads/zu3.xdc
+set_property used_in_implementation false [get_files C:/Users/Vick/Desktop/codesign/codesign_vivado/codesign_vivado.srcs/constrs_1/imports/Downloads/zu3.xdc]
 
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 
-read_checkpoint -auto_incremental -incremental C:/Users/Vick/Desktop/codesign_vivado/codesign_vivado.srcs/utils_1/imports/synth_1/half_adder.dcp
+read_checkpoint -auto_incremental -incremental C:/Users/Vick/Desktop/codesign/codesign_vivado/codesign_vivado.srcs/utils_1/imports/synth_1/half_adder.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
-| Date             : Wed Jun 25 08:22:45 2025
+| Date             : Wed Jun 25 12:23:00 2025
 | Host             : LPV-CASA running 64-bit major release  (build 9200)
 | Command          : report_power -file codesign_vivado_bd_wrapper_power_routed.rpt -pb codesign_vivado_bd_wrapper_power_summary_routed.pb -rpx codesign_vivado_bd_wrapper_power_routed.rpx
 | Design           : codesign_vivado_bd_wrapper
@@ -52,15 +52,15 @@ Table of Contents
 +-------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
-| Clocks                  |     0.002 |        3 |       --- |             --- |
+| Clocks                  |     0.003 |        3 |       --- |             --- |
 | CLB Logic               |     0.002 |     1716 |       --- |             --- |
-|   LUT as Logic          |     0.002 |      659 |     70560 |            0.93 |
+|   LUT as Logic          |     0.002 |      660 |     70560 |            0.94 |
 |   Register              |    <0.001 |      768 |    141120 |            0.54 |
 |   LUT as Shift Register |    <0.001 |        2 |     28800 |           <0.01 |
 |   CARRY8                |    <0.001 |        9 |      8820 |            0.10 |
 |   Others                |     0.000 |       95 |       --- |             --- |
 |   F7/F8 Muxes           |     0.000 |        2 |     70560 |           <0.01 |
-| Signals                 |     0.002 |     1419 |       --- |             --- |
+| Signals                 |     0.002 |     1418 |       --- |             --- |
 | I/O                     |     0.013 |       32 |       252 |           12.70 |
 | PS8                     |     2.304 |        1 |       --- |             --- |
 | Static Power            |     0.320 |          |           |                 |
@@ -76,7 +76,7 @@ Table of Contents
 +-----------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source          | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint          |       0.850 |     0.063 |       0.007 |      0.055 |       NA    | Unspecified | NA         |
+| Vccint          |       0.850 |     0.063 |       0.008 |      0.055 |       NA    | Unspecified | NA         |
 | Vccint_io       |       0.850 |     0.027 |       0.000 |      0.027 |       NA    | Unspecified | NA         |
 | Vccbram         |       0.850 |     0.001 |       0.000 |      0.001 |       NA    | Unspecified | NA         |
 | Vccaux          |       1.800 |     0.047 |       0.000 |      0.047 |       NA    | Unspecified | NA         |
@@ -89,8 +89,8 @@ Table of Contents
 | Vcco12          |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco10          |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vccadc          |       1.800 |     0.008 |       0.000 |      0.008 |       NA    | Unspecified | NA         |
-| VCC_PSINTFP     |       0.850 |     1.017 |       0.979 |      0.037 |       NA    | Unspecified | NA         |
-| VCC_PSINTLP     |       0.850 |     0.267 |       0.259 |      0.008 |       NA    | Unspecified | NA         |
+| VCC_PSINTFP     |       0.850 |     1.019 |       0.981 |      0.037 |       NA    | Unspecified | NA         |
+| VCC_PSINTLP     |       0.850 |     0.264 |       0.257 |      0.008 |       NA    | Unspecified | NA         |
 | VPS_MGTRAVCC    |       0.850 |     0.135 |       0.134 |      0.001 |       NA    | Unspecified | NA         |
 | VCC_PSINTFP_DDR |       0.850 |     0.597 |       0.592 |      0.005 |       NA    | Unspecified | NA         |
 | VCC_PSPLL       |       1.200 |     0.073 |       0.071 |      0.002 |       NA    | Unspecified | NA         |
@@ -162,8 +162,8 @@ Table of Contents
 +----------------------------+-----------+
 | codesign_vivado_bd_wrapper |     2.323 |
 |   codesign_vivado_bd_i     |     2.310 |
-|     axi_smc                |     0.005 |
-|       inst                 |     0.005 |
+|     axi_smc                |     0.006 |
+|       inst                 |     0.006 |
 |     zynq_ultra_ps_e_0      |     2.304 |
 |       inst                 |     2.304 |
 +----------------------------+-----------+

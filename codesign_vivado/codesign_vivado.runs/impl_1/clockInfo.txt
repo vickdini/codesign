@@ -1,6 +1,6 @@
 -------------------------------------
 | Tool Version : Vivado v.2025.1
-| Date         : Wed Jun 25 08:20:18 2025
+| Date         : Wed Jun 25 12:20:36 2025
 | Host         : LPV-CASA
 | Design       : design_1
 | Device       : xczu3eg-sfvc784-2-E-
@@ -28,8 +28,8 @@ Clock Net Route Info (CRP Input)
 Clock 1: codesign_vivado_bd_i/zynq_ultra_ps_e_0/inst/pl_clk0_BUFG
 	Clock source type: BUFG_PS
 	Clock source region: X0Y2
-	Clock regions with locked loads: X0Y2 
-	initial rect ((0, 2), (0, 2))
+	Clock regions with locked loads: X0Y0 
+	initial rect ((0, 0), (0, 2))
 
 
 

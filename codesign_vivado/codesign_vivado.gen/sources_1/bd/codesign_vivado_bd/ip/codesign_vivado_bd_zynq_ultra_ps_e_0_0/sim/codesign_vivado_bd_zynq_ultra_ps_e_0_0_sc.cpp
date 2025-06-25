@@ -63,7 +63,7 @@ codesign_vivado_bd_zynq_ultra_ps_e_0_0_sc::codesign_vivado_bd_zynq_ultra_ps_e_0_
     xsc::common_cpp::properties model_param_props;
     model_param_props.addLong("C_DP_USE_AUDIO", "0");
     model_param_props.addLong("C_DP_USE_VIDEO", "0");
-    model_param_props.addLong("C_MAXIGP0_DATA_WIDTH", "128");
+    model_param_props.addLong("C_MAXIGP0_DATA_WIDTH", "32");
     model_param_props.addLong("C_MAXIGP1_DATA_WIDTH", "128");
     model_param_props.addLong("C_MAXIGP2_DATA_WIDTH", "32");
     model_param_props.addLong("C_SAXIGP0_DATA_WIDTH", "128");
@@ -103,8 +103,8 @@ codesign_vivado_bd_zynq_ultra_ps_e_0_0_sc::codesign_vivado_bd_zynq_ultra_ps_e_0_
   mp_impl = new zynq_ultra_ps_e_tlm("inst", model_param_props);
 
   // initialize AXI sockets
-  M_AXI_HPM0_LPD_rd_socket = mp_impl->M_AXI_HPM0_LPD_rd_socket;
-  M_AXI_HPM0_LPD_wr_socket = mp_impl->M_AXI_HPM0_LPD_wr_socket;
+  M_AXI_HPM0_FPD_rd_socket = mp_impl->M_AXI_HPM0_FPD_rd_socket;
+  M_AXI_HPM0_FPD_wr_socket = mp_impl->M_AXI_HPM0_FPD_wr_socket;
 }
 
 codesign_vivado_bd_zynq_ultra_ps_e_0_0_sc::~codesign_vivado_bd_zynq_ultra_ps_e_0_0_sc()

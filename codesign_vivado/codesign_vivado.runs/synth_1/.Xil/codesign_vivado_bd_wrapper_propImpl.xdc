@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:C:/Users/Vick/Desktop/codesign_vivado/codesign_vivado.srcs/constrs_1/imports/Downloads/zu3.xdc rfile:../../../codesign_vivado.srcs/constrs_1/imports/Downloads/zu3.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Users/Vick/Desktop/codesign/codesign_vivado/codesign_vivado.srcs/constrs_1/imports/Downloads/zu3.xdc rfile:../../../codesign_vivado.srcs/constrs_1/imports/Downloads/zu3.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:3 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN AF5 [get_ports {PL_USER_LED[0]}]
 set_property src_info {type:XDC file:1 line:4 export:INPUT save:INPUT read:READ} [current_design]
