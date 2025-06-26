@@ -1,6 +1,6 @@
 # A Guide to Linux Hardware-Software Co-Design on the Zynq UltraScale+ SoC
 
-This repository contains the source files and documentation for a comprehensive guide to hardware-software co-design on the AMD Zynq UltraScale+ MPSoC platform. [cite_start]The project demonstrates a complete workflow, from designing a custom hardware peripheral in Verilog to controlling it with a C application running on a custom-built embedded Linux operating system. 
+This repository contains the source files and documentation for a comprehensive guide to hardware-software co-design on the AMD Zynq UltraScale+ MPSoC platform. The project demonstrates a complete workflow, from designing a custom hardware peripheral in Verilog to controlling it with a C application running on a custom-built embedded Linux operating system. 
 
 The full step-by-step guide is detailed in the accompanying paper, which can be found here:
 
@@ -8,69 +8,69 @@ The full step-by-step guide is detailed in the accompanying paper, which can be 
 
 ## About The Project
 
-[cite_start]This project serves as a practical, hands-on example for students, developers, and engineers who want to master the Zynq co-design methodology.  [cite_start]It illustrates how to effectively use the Programmable Logic (PL) for hardware acceleration while managing the system with a high-level operating system on the Processing System (PS). 
+This project serves as a practical, hands-on example for students, developers, and engineers who want to master the Zynq co-design methodology.  [cite_start]It illustrates how to effectively use the Programmable Logic (PL) for hardware acceleration while managing the system with a high-level operating system on the Processing System (PS). 
 
 The core of this guide involves:
-* [cite_start]Designing a simple half-adder in Verilog HDL. 
-* [cite_start]Using the **AMD Vivado Design Suite** to package the hardware module into a reusable IP core with an AXI4-Lite interface. 
-* [cite_start]Integrating the custom IP with the Zynq Processing System in a block design. 
-* [cite_start]Employing the **PetaLinux Tools** to build a custom embedded Linux distribution tailored for our hardware. 
-* [cite_start]Modifying the **Device Tree** to make the Linux kernel aware of our custom hardware peripheral at a specific memory address. 
-* [cite_start]Developing a user-space **C application** that communicates with the Verilog half-adder through the Userspace I/O (UIO) framework. 
-* [cite_start]Demonstrating the entire process on the **AUP-ZU3 development board**. 
+* Designing a simple half-adder in Verilog HDL. 
+* Using the **AMD Vivado Design Suite** to package the hardware module into a reusable IP core with an AXI4-Lite interface. 
+* Integrating the custom IP with the Zynq Processing System in a block design. 
+* Employing the **PetaLinux Tools** to build a custom embedded Linux distribution tailored for our hardware. 
+* Modifying the **Device Tree** to make the Linux kernel aware of our custom hardware peripheral at a specific memory address. 
+* Developing a user-space **C application** that communicates with the Verilog half-adder through the Userspace I/O (UIO) framework. 
+* Demonstrating the entire process on the **AUP-ZU3 development board**. 
 
 ## Built With
 
 This project leverages a powerful suite of AMD/Xilinx tools and standard open-source technologies.
 * **Hardware Design:**
-    * [cite_start]AMD Vivado ML Edition 
-    * [cite_start]Verilog HDL 
+    * AMD Vivado ML Edition 
+    * Verilog HDL 
 * **Embedded OS:**
-    * [cite_start]AMD PetaLinux Tools 
-    * [cite_start]U-Boot (via PetaLinux) 
-    * [cite_start]Linux Kernel 
+    * AMD PetaLinux Tools 
+    * U-Boot (via PetaLinux) 
+    * Linux Kernel 
 * **Software Development:**
-    * [cite_start]Vitis Unified Software Platform 
-    * [cite_start]C Programming Language 
+    * Vitis Unified Software Platform 
+    * C Programming Language 
 * **Host Environment:**
-    * [cite_start]Ubuntu 22.04 LTS 
-    * [cite_start]VirtualBox 
+    * Ubuntu 22.04 LTS 
+    * VirtualBox 
 
 ## Getting Started
 
-[cite_start]To replicate this project, you will need the specific hardware and software versions outlined in the paper.  The guide provides detailed, step-by-step instructions for each phase of the project.
+To replicate this project, you will need the specific hardware and software versions outlined in the paper.  The guide provides detailed, step-by-step instructions for each phase of the project.
 
 ### Prerequisites
 
 * **Hardware:**
-    * [cite_start]AUP-ZU3 Development Board 
-    * [cite_start]16GB MicroSD Card 
+    * AUP-ZU3 Development Board 
+    * 16GB MicroSD Card 
 * **Software:**
-    * [cite_start]Vivado ML Edition 
-    * [cite_start]PetaLinux Tools 
-    * [cite_start]An Ubuntu 22.04 LTS environment (native or via a VM like VirtualBox with at least 100GB of storage). 
+    * Vivado ML Edition 
+    * PetaLinux Tools 
+    * An Ubuntu 22.04 LTS environment (native or via a VM like VirtualBox with at least 100GB of storage). 
 
 ### Workflow Overview
 
 The co-design process is broken down into three main stages:
 
 1.  **Hardware Design with Vivado**
-    * [cite_start]Create a Verilog module for the half-adder logic. 
-    * [cite_start]Use the IP Packager to create a new AXI4-Lite peripheral that incorporates the Verilog code. 
-    * [cite_start]In a block design, add the Zynq UltraScale+ MPSoC IP and connect it to the custom half-adder IP. 
-    * [cite_start]Generate a bitstream and export the hardware platform as an XSA file, which serves as the "hardware handoff" to PetaLinux. 
+    * Create a Verilog module for the half-adder logic. 
+    * Use the IP Packager to create a new AXI4-Lite peripheral that incorporates the Verilog code. 
+    * In a block design, add the Zynq UltraScale+ MPSoC IP and connect it to the custom half-adder IP. 
+    * Generate a bitstream and export the hardware platform as an XSA file, which serves as the "hardware handoff" to PetaLinux. 
 
 2.  **Custom Linux OS with PetaLinux**
-    * [cite_start]Create a PetaLinux project based on the board's BSP and the XSA file generated by Vivado. 
-    * [cite_start]Configure the Linux kernel (`petalinux-config -c kernel`) to enable the Userspace I/O (UIO) driver, which allows for simple hardware access from the user-space. 
-    * [cite_start]Modify the device tree (`system-user.dtsi`) to add a node for the custom `axi4_half_adder` peripheral, specifying its memory address and compatibility with the `generic-uio` driver. 
-    * [cite_start]Build the PetaLinux project and package the final bootable WIC image for the SD card. 
+    * Create a PetaLinux project based on the board's BSP and the XSA file generated by Vivado. 
+    * Configure the Linux kernel (`petalinux-config -c kernel`) to enable the Userspace I/O (UIO) driver, which allows for simple hardware access from the user-space. 
+    * Modify the device tree (`system-user.dtsi`) to add a node for the custom `axi4_half_adder` peripheral, specifying its memory address and compatibility with the `generic-uio` driver. 
+    * Build the PetaLinux project and package the final bootable WIC image for the SD card. 
 
 3.  **Application Development & Deployment**
-    * [cite_start]Create a user-space C application within the PetaLinux project (`petalinux-create apps`). 
-    * [cite_start]The application code opens the UIO device file (e.g., `/dev/uio4`), maps the hardware's registers into its address space using `mmap()`, and then writes operands and reads the sum. 
-    * [cite_start]Rebuild PetaLinux to include the new application, re-package the boot image, and write it to the SD card. 
-    * [cite_start]Boot the AUP-ZU3 board from the SD card and run the application from the Linux command line to test the hardware. 
+    * Create a user-space C application within the PetaLinux project (`petalinux-create apps`). 
+    * The application code opens the UIO device file (e.g., `/dev/uio4`), maps the hardware's registers into its address space using `mmap()`, and then writes operands and reads the sum. 
+    * Rebuild PetaLinux to include the new application, re-package the boot image, and write it to the SD card. 
+    * Boot the AUP-ZU3 board from the SD card and run the application from the Linux command line to test the hardware. 
 
 ## Contributing
 
@@ -90,4 +90,4 @@ Distributed under the GNU License. See `LICENSE` for more information.
 
 ## Acknowledgments
 
-* [cite_start]This work was made possible through the support of the **AMD University Program**, which provided the AUP-ZU3 board used for development and demonstration.
+* This work was made possible through the support of the **AMD University Program**, which provided the AUP-ZU3 board used for development and demonstration.
