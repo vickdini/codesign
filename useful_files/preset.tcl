@@ -1,5 +1,5 @@
 proc getPresetInfo {} {
-  return [dict create name {codesign_preset} description {codesign_preset}  vlnv xilinx.com:ip:zynq_ultra_ps_e:3.5 display_name {codesign_preset} ]
+  return [dict create name {codesign} description {codesign}  vlnv xilinx.com:ip:zynq_ultra_ps_e:3.5 display_name {codesign} ]
 }
 
 proc validate_preset {IPINST} { return true }
@@ -254,13 +254,13 @@ proc apply_preset {IPINST} {
     CONFIG.PSU__USE__USB3_0_HUB {0}  \
     CONFIG.PSU__USE__USB3_1_HUB {0}  \
     CONFIG.PSU__USE__ADMA {0}  \
-    CONFIG.PSU__USE__M_AXI_GP0 {0}  \
+    CONFIG.PSU__USE__M_AXI_GP0 {1}  \
     CONFIG.PSU__M_AXI_GP0_SUPPORTS_NARROW_BURST {1}  \
+    CONFIG.PSU__MAXIGP0__DATA_WIDTH {32}  \
     CONFIG.PSU__USE__M_AXI_GP1 {0}  \
     CONFIG.PSU__M_AXI_GP1_SUPPORTS_NARROW_BURST {1}  \
-    CONFIG.PSU__USE__M_AXI_GP2 {1}  \
+    CONFIG.PSU__USE__M_AXI_GP2 {0}  \
     CONFIG.PSU__M_AXI_GP2_SUPPORTS_NARROW_BURST {1}  \
-    CONFIG.PSU__MAXIGP2__DATA_WIDTH {32}  \
     CONFIG.PSU__USE__S_AXI_ACP {0}  \
     CONFIG.PSU__USE__S_AXI_GP0 {0}  \
     CONFIG.PSU__USE__S_AXI_GP1 {0}  \

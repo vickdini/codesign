@@ -60,6 +60,9 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==codesign_vi
 # IP: bd/codesign_vivado_bd/ip/codesign_vivado_bd_rst_ps8_0_96M_3/codesign_vivado_bd_rst_ps8_0_96M_3.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==codesign_vivado_bd_rst_ps8_0_96M_3 || ORIG_REF_NAME==codesign_vivado_bd_rst_ps8_0_96M_3} -quiet] -quiet
 
+# IP: bd/codesign_vivado_bd/ip/codesign_vivado_bd_xlconstant_0_0/codesign_vivado_bd_xlconstant_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==codesign_vivado_bd_xlconstant_0_0 || ORIG_REF_NAME==codesign_vivado_bd_xlconstant_0_0} -quiet] -quiet
+
 # XDC: c:/Users/Vick/Desktop/codesign/codesign_vivado/codesign_vivado.gen/sources_1/bd/codesign_vivado_bd/ip/codesign_vivado_bd_zynq_ultra_ps_e_0_0/codesign_vivado_bd_zynq_ultra_ps_e_0_0_ooc.xdc
 
 # XDC: c:/Users/Vick/Desktop/codesign/codesign_vivado/codesign_vivado.gen/sources_1/bd/codesign_vivado_bd/ip/codesign_vivado_bd_zynq_ultra_ps_e_0_0/codesign_vivado_bd_zynq_ultra_ps_e_0_0.xdc

@@ -2,7 +2,7 @@
 //Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
-//Date        : Wed Jun 25 12:13:39 2025
+//Date        : Thu Jun 26 08:02:19 2025
 //Host        : LPV-CASA running 64-bit major release  (build 9200)
 //Command     : generate_target codesign_vivado_bd.bd
 //Design      : codesign_vivado_bd
@@ -10,7 +10,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "codesign_vivado_bd,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=codesign_vivado_bd,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=4,numReposBlks=4,numNonXlnxBlks=1,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=5,synth_mode=None}" *) (* HW_HANDOFF = "codesign_vivado_bd.hwdef" *) 
+(* CORE_GENERATION_INFO = "codesign_vivado_bd,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=codesign_vivado_bd,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=5,numReposBlks=5,numNonXlnxBlks=1,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=5,synth_mode=None}" *) (* HW_HANDOFF = "codesign_vivado_bd.hwdef" *) 
 module codesign_vivado_bd
    (sum_leds);
   output [31:0]sum_leds;
@@ -36,6 +36,7 @@ module codesign_vivado_bd
   wire axi_smc_M00_AXI_WVALID;
   wire [0:0]rst_ps8_0_96M_peripheral_aresetn;
   wire [31:0]sum_leds;
+  wire [0:0]xlconstant_0_dout;
   wire [39:0]zynq_ultra_ps_e_0_M_AXI_HPM0_FPD_ARADDR;
   wire [1:0]zynq_ultra_ps_e_0_M_AXI_HPM0_FPD_ARBURST;
   wire [3:0]zynq_ultra_ps_e_0_M_AXI_HPM0_FPD_ARCACHE;
@@ -164,11 +165,13 @@ module codesign_vivado_bd
         .aresetn(rst_ps8_0_96M_peripheral_aresetn));
   codesign_vivado_bd_rst_ps8_0_96M_3 rst_ps8_0_96M
        (.aux_reset_in(1'b1),
-        .dcm_locked(1'b1),
+        .dcm_locked(xlconstant_0_dout),
         .ext_reset_in(zynq_ultra_ps_e_0_pl_resetn0),
         .mb_debug_sys_rst(1'b0),
         .peripheral_aresetn(rst_ps8_0_96M_peripheral_aresetn),
         .slowest_sync_clk(zynq_ultra_ps_e_0_pl_clk0));
+  codesign_vivado_bd_xlconstant_0_0 xlconstant_0
+       (.dout(xlconstant_0_dout));
   codesign_vivado_bd_zynq_ultra_ps_e_0_0 zynq_ultra_ps_e_0
        (.maxigp0_araddr(zynq_ultra_ps_e_0_M_AXI_HPM0_FPD_ARADDR),
         .maxigp0_arburst(zynq_ultra_ps_e_0_M_AXI_HPM0_FPD_ARBURST),

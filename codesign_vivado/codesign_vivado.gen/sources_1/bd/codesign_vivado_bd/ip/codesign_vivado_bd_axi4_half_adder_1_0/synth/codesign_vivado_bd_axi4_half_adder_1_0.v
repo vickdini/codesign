@@ -48,7 +48,7 @@
 
 
 // IP VLNV: vickdini.com:codesign:axi4_half_adder:1.0
-// IP Revision: 5
+// IP Revision: 10
 
 (* X_CORE_INFO = "axi4_half_adder,Vivado 2025.1" *)
 (* CHECK_LICENSE_TYPE = "codesign_vivado_bd_axi4_half_adder_1_0,axi4_half_adder,{}" *)

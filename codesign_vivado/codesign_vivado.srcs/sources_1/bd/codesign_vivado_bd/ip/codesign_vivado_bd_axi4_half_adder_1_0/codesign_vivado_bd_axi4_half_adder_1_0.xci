@@ -4,7 +4,7 @@
     "xci_name": "codesign_vivado_bd_axi4_half_adder_1_0",
     "cell_name": "axi4_half_adder_1",
     "component_reference": "vickdini.com:codesign:axi4_half_adder:1.0",
-    "ip_revision": "5",
+    "ip_revision": "10",
     "gen_directory": "../../../../../../codesign_vivado.gen/sources_1/bd/codesign_vivado_bd/ip/codesign_vivado_bd_axi4_half_adder_1_0",
     "parameters": {
       "component_parameters": {
@@ -33,7 +33,7 @@
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Integrator" } ],
-        "IPREVISION": [ { "value": "5" } ],
+        "IPREVISION": [ { "value": "10" } ],
         "MANAGED": [ { "value": "TRUE" } ],
         "OUTPUTDIR": [ { "value": "../../../../../../codesign_vivado.gen/sources_1/bd/codesign_vivado_bd/ip/codesign_vivado_bd_axi4_half_adder_1_0" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],

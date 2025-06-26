@@ -1,6 +1,27 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
+| Date         : Wed Jun 25 23:19:56 2025
+| Host         : LPV-CASA running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu3eg-sfvc784-2-e
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'codesign_vivado_bd_axi4_half_adder_1_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of codesign_vivado_bd_axi4_half_adder_1_0 (vickdini.com:codesign:axi4_half_adder:1.0) from (Rev. 5) to (Rev. 10)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
 | Date         : Wed Jun 25 08:06:09 2025
 | Host         : LPV-CASA running 64-bit major release  (build 9200)
 | Command      : upgrade_ip

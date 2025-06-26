@@ -3,8 +3,8 @@
 # SW Build 6140274 on Thu May 22 00:12:29 MDT 2025
 # IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
 # SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
-# Start of session at: Wed Jun 25 12:14:54 2025
-# Process ID         : 34080
+# Start of session at: Thu Jun 26 08:02:33 2025
+# Process ID         : 7032
 # Current directory  : C:/Users/Vick/Desktop/codesign/codesign_vivado/codesign_vivado.runs/synth_1
 # Command line       : vivado.exe -log codesign_vivado_bd_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source codesign_vivado_bd_wrapper.tcl
 # Log file           : C:/Users/Vick/Desktop/codesign/codesign_vivado/codesign_vivado.runs/synth_1/codesign_vivado_bd_wrapper.vds
@@ -19,6 +19,6 @@
 # Host memory        : 68585 MB
 # Swap memory        : 4294 MB
 # Total Virtual      : 72880 MB
-# Available Virtual  : 52147 MB
+# Available Virtual  : 49899 MB
 #-----------------------------------------------------------
 source codesign_vivado_bd_wrapper.tcl -notrace

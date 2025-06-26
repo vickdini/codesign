@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Jun 25 12:14:44 2025" VIVADOVERSION="2025.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Jun 26 08:02:23 2025" VIVADOVERSION="2025.1">
 
   <SYSTEMINFO ARCH="zynquplus" DEVICE="xczu3eg" NAME="codesign_vivado_bd" PACKAGE="sfvc784" SPEEDGRADE="-2"/>
 
@@ -14,7 +14,7 @@
   <EXTERNALINTERFACES/>
 
   <MODULES>
-    <MODULE COREREVISION="5" FULLNAME="/axi4_half_adder_1" HWVERSION="1.0" INSTANCE="axi4_half_adder_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="axi4_half_adder" VLNV="vickdini.com:codesign:axi4_half_adder:1.0">
+    <MODULE COREREVISION="10" FULLNAME="/axi4_half_adder_1" HWVERSION="1.0" INSTANCE="axi4_half_adder_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="axi4_half_adder" VLNV="vickdini.com:codesign:axi4_half_adder:1.0">
       <DOCUMENTS/>
       <ADDRESSBLOCKS>
         <ADDRESSBLOCK ACCESS="" INTERFACE="S00_AXI_Half_Adder" NAME="S00_AXI_Half_Adder_reg" RANGE="4096" USAGE="register"/>
@@ -668,7 +668,11 @@
       <PORTS>
         <PORT DIR="I" NAME="aux_reset_in" POLARITY="ACTIVE_LOW" SIGIS="rst"/>
         <PORT DIR="O" LEFT="0" NAME="bus_struct_reset" POLARITY="ACTIVE_HIGH" RIGHT="0" SIGIS="rst"/>
-        <PORT DIR="I" NAME="dcm_locked" SIGIS="undef"/>
+        <PORT DIR="I" NAME="dcm_locked" SIGIS="undef" SIGNAME="xlconstant_0_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xlconstant_0" PORT="dout"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="I" NAME="ext_reset_in" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="zynq_ultra_ps_e_0_pl_resetn0">
           <CONNECTIONS>
             <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="pl_resetn0"/>
@@ -687,6 +691,23 @@
         <PORT CLKFREQUENCY="95454536" DIR="I" NAME="slowest_sync_clk" SIGIS="clk" SIGNAME="zynq_ultra_ps_e_0_pl_clk0">
           <CONNECTIONS>
             <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="pl_clk0"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="10" FULLNAME="/xlconstant_0" HWVERSION="1.1" INSTANCE="xlconstant_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconstant" VLNV="xilinx.com:ip:xlconstant:1.1">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="CONST_VAL" VALUE="0x1"/>
+        <PARAMETER NAME="CONST_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="Component_Name" VALUE="codesign_vivado_bd_xlconstant_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" LEFT="0" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_0_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rst_ps8_0_96M" PORT="dcm_locked"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -2631,8 +2652,8 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_smc" PORT="aclk"/>
             <CONNECTION INSTANCE="rst_ps8_0_96M" PORT="slowest_sync_clk"/>
-            <CONNECTION INSTANCE="axi4_half_adder_1" PORT="s00_axi_half_adder_aclk"/>
             <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxihpm0_fpd_aclk"/>
+            <CONNECTION INSTANCE="axi4_half_adder_1" PORT="s00_axi_half_adder_aclk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="pl_resetn0" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="zynq_ultra_ps_e_0_pl_resetn0">
