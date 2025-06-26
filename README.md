@@ -90,4 +90,4 @@ Distributed under the GNU License. See `LICENSE` for more information.
 
 ## Acknowledgments
 
-* This work was made possible through the support of the **AMD University Program**, which provided the AUP-ZU3 board used for development and demonstration.
+This work was made possible through the support of the **AMD University Program**, which provided the AUP-ZU3 board used for development and demonstration.
